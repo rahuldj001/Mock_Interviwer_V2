@@ -1,0 +1,70 @@
+AIInterviewCoach/
+│── app.py                 # Main entry point (Streamlit app likely)
+│── init_database.py       # Script to initialize the database
+│── README.md              # Project documentation
+│── pyproject.toml         # Dependencies & project setup
+│── replit.md              # Replit-specific config notes
+│── uv.lock                # Dependency lock file
+│── .replit                # Replit config
+│
+├── .streamlit/
+│   └── config.toml        # Streamlit configuration
+│
+├── data/
+│   └── sample_questions.py  # Sample interview questions
+│
+├── models/
+│   └── interview_models.py  # Defines interview-related ML/LLM models
+│
+├── services/
+│   ├── database_service.py   # Handles DB operations (save/retrieve interviews)
+│   ├── gemini_service.py     # Connects with Google Gemini (AI responses)
+│   ├── interview_manager.py  # Core logic for interview sessions
+│   └── speech_service.py     # Speech-to-text / text-to-speech handling
+│
+├── utils/
+│   └── audio_utils.py        # Audio recording & processing helpers
+│
+├── attached_assets/
+│   └── AI Engineer Assignment_1757771593709.pdf  # Assignment brief
+│
+└── (system files: .git, .local, caches, etc.)
+🔑 Main Components
+Frontend (User Interface)
+
+app.py → Likely a Streamlit app that provides the UI for mock interviews (Q&A flow, audio input, AI responses).
+
+.streamlit/config.toml → Customizes how the UI looks/behaves.
+
+Data & Content
+
+data/sample_questions.py → Holds example interview questions (technical/behavioral).
+
+Models
+
+models/interview_models.py → Defines the AI/ML models used to analyze answers or generate interview feedback.
+
+Services (Core Logic Layer)
+
+gemini_service.py → Handles connection with Google Gemini API (for AI-generated interview questions/responses).
+
+interview_manager.py → Manages the interview session flow (which question next, storing responses, etc.).
+
+speech_service.py → Converts speech ↔ text (STT/TTS integration).
+
+database_service.py → Manages storage of interview sessions, responses, and scores.
+
+Utilities
+
+utils/audio_utils.py → Helper functions for audio recording & processing.
+
+Database
+
+init_database.py → Script to set up the interview results/questions database.
+
+Config & Setup
+
+pyproject.toml + uv.lock → Define dependencies (likely streamlit, google-generativeai, sqlite etc.).
+
+replit.md + .replit → Instructions for running on Replit.
+
